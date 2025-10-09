@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>BarBearia</title>
+
+</head>
+<body>
+    <div class="elemento-com-fundo"></div>
+    <header>
+		<div class="inicio">
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/cauana-veriato-7591a0165/" target="_blank"><i class="fab fa-linkedin"></i></a>
+				<a href="https://www.facebook.com/https://www.facebook.com/cauana.veriato" target="_blank"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.instagram.com/veriatocauana/" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="https://github.com/cauanaver" target="_blank"><i class="fab fa-github"></i></a>
+				<a href="https://wa.me/+5521969592169" target="_blank"><i class="fab fa-whatsapp"></i></a>
+			</div>
+        </div>
+			<div class="perfil">
+				<img src="img/logo.png" class="logo" alt="foto da logo">
+				<h1 class="nome">BarBearia</h1>
+			</div>
+        </div>
+    </header>
+    <div class="caixa-de-marketing">
+        <p class="p-sobre">Aqui você tem qualidade, profissionalismo, ambiente familiar, descontração e conversa boa.<br>
+            Além de um bom chopp extremamente gelado, vem conhecer nossa barbearia.<br>
+             Conheça nossas unidades.
+        </p>
+    </div>   
+        <div class="fotos-unidades">
+        <div class="projetos-card">    
+            <img src="img/unidade1.png" class="img" alt=" Loja 1">
+            <h3 class="endereço-unidade"> Estrada de Pernambuco n°12</h3>
+        </div>
+        <div class="projetos-card">  
+            <img src="img/unidade2.png" class="img" alt="Loja 2">
+             <h3 class="endereço-unidade">Estrada São Luis n°23</h3>
+        </div>
+        <div class="projetos-card">    
+            <img src="img/unidade3.png" class="img" alt="Loja 3">   
+            <h3 class="endereço-unidade">Estrada João Pessoa n°24</h3>
+        </div>
+        </div>   
+
+    <div class="container">
+    <section class="agendamento-caixa">
+        <h3 class="frase-agendamento">Preencha abaixo todas as informações para realizar seu agendamento:</h3>
+        
+        
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+        
+        
+        <select id="servico" required>
+            <option value="">Selecione o serviço</option>
+            <option value="Corte">Corte</option>
+            <option value="Barba">Barba</option>
+            <option value="Corte + Barba">Corte + Barba</option>
+        </select>
+       
+       
+        <select id="unidade" required>
+            <option value="">Selecione a unidade</option>   
+            <option value="Estrada de Pernambuco 12">Estrada de Pernambuco n°12</option>
+            <option value="Estrada São Luis n°23">Estrada São Luis n°23</option>
+            <option value="Estrada João Pessoa n°24">Estrada João Pessoa n°24</option>
+        </select>
+       
+       
+        <input type="date" id="data">
+        <input type="time" id="hora">
+
+        <button onclick="agendar()">Agendar</button>
+
+        <div class="agendamento" id="listaAgendamento">
+            <h2>Agendamento:</h2>
+         </div> 
+
+</section>       
+
+    <div class="foto-barbeiro">
+        <img src="img/barbeiro.png" class="barbeiro">
+    </div>
+ </div>   
+
+    <script src="script.js"></script>
+</body>
+
+<footer>
+    <p>© 2025 Cauana Veriato - Todos os direitos reservados</p>
+</footer>
+</html>
