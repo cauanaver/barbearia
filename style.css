@@ -1,6 +1,9 @@
 * {
     margin: 0;
-    min-height: 100%;
+    
+    box-sizing: border-box;
+    ;
+
 
 }
 
@@ -12,7 +15,7 @@ body {
     margin: 0;
     padding: 0; 
     background-attachment: fixed; 
-    display: flex;
+    
     ;
 }
 
@@ -113,21 +116,24 @@ button:hover {
 
 .fotos-unidades {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     border-bottom-left-radius: 20px;
     z-index: 1;
-    justify-content: center;
-    
+    align-items: stretch;
+    margin: 0 auto;
+    padding: 0 20px; 
     
 }
 
-.img { width: 100%;
-       height: auto; 
-       max-width: 400px;
-       border-radius: 20px;
+.img {  width: 100%;
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Corta mantendo proporção */
+    border-radius: 16px 16px 0 0; /* Só arredonda o topo */
+    display: block;
+    flex-shrink: 0; /* Não encolhe */
        
        
     
@@ -135,10 +141,19 @@ button:hover {
 }
 
 .endereço-unidade {
-    color: rgb(255, 255, 255,0.8);
+    color: rgba(255, 255, 255,0.8);
     text-align: center;
     font-family:Bradley Hand, cursive ;
-   
+    padding: 8px;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.4;
+    word-wrap: break-word;
+    min-height: 70px;
 }
 
  .perfil {
@@ -243,7 +258,7 @@ header {
     background: url('img/fundo.png') no-repeat center center;
     background-size: cover;
     filter: blur(8px); /* desfoque */
-    z-index: -1;        /     
+    z-index: -1;     
 }
 
 .projetos-card {
@@ -252,7 +267,13 @@ header {
     backdrop-filter: blur(10px);
     border: 1px solid rgb(255, 255, 255);
     overflow:hidden ;
-    transition: all 0.5 ease;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0; /* CRÍTICO para responsividade */
+    width: 100%;
+    
     
   
 }
@@ -269,7 +290,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
+    margin-top: 40px;
 }
 
 .whatsapp-fixo {
@@ -289,6 +310,7 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     animation: flutuar 2.5s ease-in-out infinite;
+    ;
 }
 
 
@@ -309,13 +331,7 @@ footer {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 @media (max-width: 768px) {
-
     body {
         background-attachment: scroll;
     }
@@ -360,7 +376,39 @@ img {
         height: 55px;
         font-size: 24px;
     }
+    .fotos-unidades {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .projetos-card .img {
+        height: 180px;
+    }
 }
- .conteudo-principal {
-    flex: 1;
+
+@media (max-width: 480px) {
+    .fotos-unidades {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 15px;
+    }
+    
+    .projetos-card .img {
+        height: 160px;
+    }
+    
+    .perfil h1 {
+        font-size: 28px;
+    }
+    
+    .agendamento-caixa {
+        padding: 15px;
+    }
+}
+
+/* Para tablets landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .fotos-unidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
