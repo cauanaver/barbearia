@@ -1,7 +1,6 @@
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    min-height: 100%;
 
 }
 
@@ -9,14 +8,11 @@ body {
     background: url(img/fundo.png) no-repeat center center;
     background-size: cover;
     position: relative;
-    height: 100vh;
     background-repeat: no-repeat;
     margin: 0;
-    padding: 0;
-    justify-content: center; /* centraliza na horizontal */
-    align-items: center; 
-     background-attachment: fixed; 
-    
+    padding: 0; 
+    background-attachment: fixed; 
+    display: flex;
     ;
 }
 
@@ -273,7 +269,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: auto;
 }
 
 .whatsapp-fixo {
@@ -364,4 +360,7 @@ img {
         height: 55px;
         font-size: 24px;
     }
+}
+ .conteudo-principal {
+    flex: 1;
 }
